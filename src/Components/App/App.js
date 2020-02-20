@@ -4,6 +4,7 @@ import "./App.scss"
 import Nav from "../Nav/Nav"
 import Table from "../Table/Table"
 import CartFooter from "../CartFooter/CartFooter"
+import Header from "../Header/Header"
 
 // traditionally I'd use a URL from the backend to handle images, for the moment this will do.
 import jetski from "./images/jetski.png"
@@ -127,16 +128,7 @@ export default class App extends React.Component {
                     </div>
                 }
                 <div className = "container">
-                    <div className = "header row">
-                        <div className = "col-xs-6">
-                            <h1>Your Cart</h1>
-                        </div>
-                        <div className = "col-xs-6 end-xs">
-                            <span className = "breadcrumb">
-                                Home <span>→</span> Checkout
-                            </span>
-                        </div>
-                    </div>
+                    <Header title = "Your Cart" breadcrumb = "Home → Checkout" />
                     <Table
                         table = { items }
                         update = { this.editItem }
