@@ -1,0 +1,94 @@
+.cart {
+    .cartHeader,
+    .cartBody {
+        border-radius: 5px;
+    }
+    .cartHeader {
+        padding:15px 0;
+        background-color: #0B0B0B;
+        margin-bottom: 26px;
+        .removeHeader {
+            text-align: right;
+        }
+        .imageHeader {
+            margin-left: 128px;
+        }
+    }
+    .cartBody {
+        align-items: center;
+        margin-bottom: 26px;
+        font-size: 20px;
+        img {
+            border-radius: 5px;
+            margin-right: 28px;
+        }
+        .sku {
+            font-size: 16px;
+            margin-top: 10px;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        .quantity {
+            width: 10px;
+            padding: 13px 18px;
+            border-radius: 5px;
+            background-color: black;
+            color: white;
+            border: none;
+
+            font-size: 20px;
+
+            // hide controls
+            &::-webkit-outer-spin-button,
+            &::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+
+            /* Firefox */
+            &[type=number] {
+                -moz-appearance:textfield;
+            }
+            // background-color: black;
+            // display: inline-block;
+            // padding: 13px 18px;
+            // border-radius: 5px;
+            // margin-right: 10px;
+        }
+        &:nth-of-type(odd) {
+            background-color: black;
+            .quantity {
+                background-color: #1b1b1b;
+            }
+        }
+    }
+    .update {
+        display: inline-block;
+        margin-left: 10px;
+        cursor: pointer;
+        padding-bottom: 1px;
+        border-bottom: 1px solid white;
+        font-size: 14px;
+    }
+    .remove,
+    .remove2 {
+        width: 20px;
+        border: 1px solid white;
+    }
+    .remove {
+        transform: rotate(-45deg);
+    }
+    .remove2 {
+        position: relative;
+        margin-top: -2px;
+
+        transform: rotate(45deg);
+    }
+    .forceCenter {
+        margin: 0 auto;
+    }
+    .button {
+        display: inline-block;
+        // background-color: orange;
+        padding:20px;
+    }
+}

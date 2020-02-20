@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "SF Pro Text";
+    src: local('SF-Pro-Regular'), url(./SF-Pro-Regular.ttf) format ('tff');
+}
+* {
+    font-family: "SF Pro Text", sans-serif;
+}
+.App {
+    background-color: #1b1b1b;
+    min-height: 100vh;
+    color: white;
+    padding-bottom: 110px;
+    .header {
+        padding: 73px 0;
+        align-items: center;
+        h1 {
+            font-weight: 400;
+            font-size: 28px;
+        }
+        .breadcrumb {
+            background-color: #0b0b0b;
+            display: inline-block;
+            padding: 15px 13px;
+            border-radius: 5px;
+            span {
+                font-size: 20px;
+            }
+        }
+    }
+    .toast {
+        position: fixed;
+        right:100px;
+        top:85px;
+        background-color: #0b0b0b;
+        padding:10px 15px;
+        border-radius: 5px;
+        z-index: 1;
+        transition: ease all .3s;
+    }
+}
+@import './grid.scss'
