@@ -30,7 +30,12 @@ export default class Item extends React.Component {
     handleUpdate(event) {
         let item = this.props.item,
             value = event.target.value
-        // Max value
+
+        // if a user tries to force the value to be a letter we'll just change it back to the original
+        if(!Number.isInteger(value)) {
+            value = this.state.quantity
+        }
+        // 9 = Max value
         if(event.target.value > 9) {
             value = 9
         }
